@@ -1,0 +1,10 @@
+{
+  "name": "subscribers",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular-ui-router": "0.2.13",
+
+    "angular": ">= 1.0.8"
+  },
+  "private": true
+}

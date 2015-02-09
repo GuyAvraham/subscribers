@@ -1,0 +1,17 @@
+<head>
+    <base href="/">
+    <script src="ng-tags-input.js"></script>
+    <link rel="stylesheet" type="text/css" href="ng-tags-input.css">
+</head>
+<body>
+
+<div ng-app="subscribers">
+
+    <meteor-include src="loginButtons"></meteor-include>
+    <div ng-hide="$root.currentUser">log in please</div>
+    <h3><a href="/home">home</a> </h3>
+
+    <div ui-view></div>
+</div>
+
+</body>

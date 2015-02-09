@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "ng-tags-input": {
+      "version": "2.1.1"
+    }
+  }
+}

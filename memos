@@ -1,0 +1,23 @@
+meteor mongo
+    db.parties.insert({ name: "A new party", description: "From the mongo console!" });
+    db.parties.find({});
+    db.parties.remove( {"_id": "N4KzMEvtm4dYvk2TF"});
+
+var rsvpIndex = _.indexOf(_.pluck(party.rsvps, 'user'), this.userId);
+    -1 for null. pluck=getValues of user field
+
+// server side update the appropriate rsvp entry with $
+Parties.update( {_id: partyId, "rsvps.user": this.userId}, {$set: {"rsvps.$.rsvp": rsvp}});
+//client side
+var modifier = {$set: {}};
+modifier.$set["rsvps." + rsvpIndex + ".rsvp"] = rsvp; //rsvps.3.rsvp
+Parties.update(partyId, modifier);
+// add new rsvp entry
+Parties.update(partyId, {$push: {rsvps: {user: this.userId, rsvp: rsvp}}});
+
+Yes - {{ (party.rsvps | filter:{rsvp:'yes'}).length }}
+
+meteor-include for meteor template
+https://github.com/a8m/angular-filter
+
+collection update $addToSet
